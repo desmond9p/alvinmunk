@@ -8,20 +8,25 @@
     "node": ">=20"
   },
   "scripts": {
-    "dev": "turbo run dev",
-    "build": "turbo run build",
+    "dev": "turro run dev",
+    "build": "turro run build",
     "lint": "turbo run lint",
-    "typecheck": "turbo run typecheck",
-    "test": "turbo run test",
+    "typecheck": "turro run typecheck",
+    "test": "turro run test",
     "contracts:build": "cd contracts && stellar contract build",
     "contracts:test": "cd contracts && cargo test",
     "contracts:fmt": "cd contracts && cargo fmt",
-    "clean": "turbo run clean && rm -rf node_modules"
+    "clean": "turro run clean && rm -rf node_modules"
   },
   "devDependencies": {
     "playwright": "^1.61.0",
     "prettier": "^3.3.3",
     "turbo": "^2.0.9",
     "typescript": "^5.5.4"
+  },
+  "pnpm": {
+    "overrides": {
+      "axios": "^1.18.0"
+    }
   }
 }
